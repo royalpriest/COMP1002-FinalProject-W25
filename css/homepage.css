@@ -1,0 +1,557 @@
+body {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header styles - top navigation bar */
+header {
+  background-color: white;
+  height: 50px ;
+  padding: 15px 0;
+  border-bottom: 2px inset rgb(19, 19, 136);
+  box-shadow: 0px 5px 5px rgb(59, 34, 174);
+  gap: 100px;
+  position: relative;
+  z-index: 10; /* Ensures header stays above other content */
+}
+
+/* Container for header content */
+.header-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 2000px;
+  margin: auto;
+  padding: 0 50px;
+  gap: 700px; /* Large gap between logo and nav items */
+
+}
+
+/* Logo styling */
+.ford-logo {
+  display: flex;
+  align-items: center;
+}
+
+.ford-icon {
+  height: 50px;
+}
+
+/* Navigation items */
+.nav-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-items a {
+  text-decoration: none;
+  color: black;
+  display: inline-block;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  
+}
+
+/* Hover effects for navigation links */
+.nav-items a:hover {
+  color: black;
+  text-decoration: underline;
+  transform: scale(1.05) translateY(-2px);
+  text-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+ 
+}
+
+
+/* Welcome section styling - now with margin-top */
+.welcome {
+  position: relative;
+  height: 80px;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+  padding: 2rem;
+  margin-top: 4px; /* Matches header height */
+  border-bottom: 2px inset rgb(19, 19, 136);
+  box-shadow: 0px 8px 10px rgb(59, 34, 174);
+}
+
+/* Background styling */
+.welcome::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  background-image: url(/images/ford-bk6.avif)  ; 
+  background-size: 950px;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -2;
+}
+
+/* Gradient overlay for welcome section */
+.welcome::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: linear-gradient(
+        to bottom,
+        rgba(19, 0, 0, 0.2) 0%,
+        rgba(12, 48, 90, 0.7) 100%
+    );
+}
+
+/* Content container */
+.welcome-content {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  padding: 3rem;
+  animation: fadeInUp 1s ease-out;
+  margin-bottom: 300px;
+  text-transform: uppercase;
+}
+
+
+/* Welcome heading styles */
+.welcome-content h1 {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  
+}
+
+.welcome-content h1::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  margin: 1rem auto;
+}
+
+/* Welcome paragraph styles */
+.welcome-content p {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+
+/* Animation for welcome content */
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(40px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+
+
+/* car slideshow*/
+.car-slide {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #f5f5f5 0%, #e0e0e0 100%);
+  padding: 3rem 0;
+  margin: 2rem 0;
+  margin-top: 10px;
+  border-bottom: 1px inset rgb(19, 19, 136);
+  box-shadow: 0px 15px 20px rgb(59, 34, 174);
+}
+
+/* Inner container for slides */
+.car-slide-inner{
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 100%; /* Remove fixed width */
+  
+}
+
+/* Individual slide styling */
+.slide{
+ min-width: calc(100% / 3); 
+  box-sizing: border-box;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Slide content area */
+.slide-content {
+  text-align: center;
+  max-width: 800px;
+  padding: 0 1rem;
+}
+
+.slide-content h2 {
+  font-size: 2rem;
+  color: #002D55;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Car description text */
+.car-about{
+  height: 160px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 4rem;
+  padding: 0 1rem;
+}
+
+/* Active slide styling */
+.slide-active {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.slide-active img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 2s ease;
+}
+
+/* Hover effect for active slide */
+.slide-active:hover img {
+  transform: scale(1.03);
+}
+
+/* Navigation buttons for slideshow */
+.car-slide-btn{
+  display:flex;
+  justify-content:center;
+  gap:1rem;
+  padding-top:2rem;
+}
+
+.car-slide-btn button{
+  cursor: pointer;
+  padding:.5rem 1rem;
+  background-color: #002D55;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.car-slide-btn button:hover:not(:disabled) {
+  background-color: #004F9F;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.car-slide-btn button:disabled {
+  cursor: not-allowed;
+  background: #ccc;
+}
+
+.slide-active img{
+  width: 400px;
+}
+
+.car-about {
+  height: 160px;
+}
+
+/* Footer styling */
+.ford-footer {
+  background-color: #f5f5f5;
+  color: #333;
+  padding: 40px 0 20px;
+  font-family: Arial, sans-serif;
+  border-top: 1px solid #e0e0e0;
+ 
+
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Footer layout */
+.footer-main-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 150px;
+  padding: 0 15px;
+}
+
+/* Footer headings */
+.footer-heading {
+  color: #002D55;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+/* Footer links */
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: #333;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: #004F9F;
+  text-decoration: underline;
+}
+.footer-bottom {
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column; /* Changed to column layout */
+  gap: 20px; /* Added gap between sections */
+}
+
+/* Social Links Section */
+.social-links {
+  display: flex;
+  justify-content: center; /* Center social links */
+  gap: 24px;
+  border-bottom: 1px solid #ddd; /* Divider line */
+  margin-bottom: 20px;
+}
+
+/* Social links styling */
+.social-links a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #002D55;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: color 0.2s;
+  transition: all 0.2s ease;
+  margin-bottom: 20px;
+}
+
+.social-links img {
+  width: 17px;
+  height: 17px;
+  transition: transform 0.2s ease;
+}
+
+.social-links a:hover {
+  color: #004F9F;
+  text-decoration: underline;
+}
+
+.legal-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+.legal-links a {
+  color: #666;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.copyright {
+  width: 100%;
+  text-align: center;
+  color: #666;
+  font-size: 0.8rem;
+  margin-top: 10px;
+}
+
+/* Mobile Responsive Styles (768px and below) */
+@media (max-width: 768px) {
+  /* Header adjustments */
+  header {
+    height: auto;
+    padding: 10px 0;
+  }
+
+  .header-container {
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  /* Navigation */
+  .nav-items {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px 0;
+  }
+
+  .nav-items a {
+    font-size: 0.9rem;
+    padding: 5px 10px;
+  }
+
+  /* Welcome section */
+  .welcome {
+    min-height: 400px;
+    margin-top: 0;
+  }
+
+  .welcome::before {
+    background-size: cover;
+    background-position: 60% center;
+  }
+
+  .welcome-content {
+    padding: 2rem;
+    margin-bottom: 150px;
+  }
+
+  .welcome-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .welcome-content p {
+    font-size: 1rem;
+  }
+
+  /* Car slideshow */
+  .car-slide-inner {
+    flex-direction: column;
+  }
+  
+  .slide {
+    min-width: 100%;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 2rem;
+  }
+  
+  .slide:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+  
+  .car-slide-btn {
+    display: none; /* Hide navigation buttons */
+  }
+  
+  /* Adjust content order if needed */
+  .slide-content {
+    order: 1;
+  }
+  
+  .slide-active {
+    order: 2;
+  }
+
+
+  /* Footer */
+  .footer-main-row {
+    flex-direction: column;
+  }
+
+  .footer-section {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #e0e0e0;
+  }
+}
+
+/* Extra small devices (480px and below) */
+@media (max-width: 480px) {
+  /* Header */
+  .ford-icon {
+    height: 40px;
+  }
+
+  .nav-items {
+    gap: 10px;
+  }
+
+  /* Welcome section */
+  .welcome-content h1 {
+    font-size: 2rem;
+  }
+
+  .welcome-content {
+    padding: 1rem;
+    margin-bottom: 100px;
+  }
+
+  /* Car slideshow */
+  .slide-active img {
+    width: 100%;
+  }
+
+  .car-slide-btn button {
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+
+  /* Footer */
+  .social-links {
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  .legal-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
