@@ -416,11 +416,31 @@ body {
   /* Mobile Responsive Styles */
 @media (max-width: 768px) {
   /* Header adjustments */
+
+  header {
+    height: auto; /* Auto height for header */
+    padding: 10px 0; /* Reduced padding for header */
+  }
+
   .header-container {
     flex-direction: column;
     gap: 15px;
     padding: 0 20px;
   }
+
+  /* Navigation */
+  .nav-items {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px 0;
+  }
+
+  .nav-items a {
+    font-size: 0.9rem;
+    padding: 5px 10px;
+  }
+
 
   .nav-items {
     flex-wrap: wrap;
@@ -444,6 +464,7 @@ body {
     flex-direction: column;   /* Stack items vertically */
     padding: 1rem 0; /* Reduced padding for mobile */
     margin: 1rem 0; /* Reduced margin for mobile */
+    
   }
 
   /* Categories panel */
@@ -514,6 +535,16 @@ body {
     padding: 10px 0; /* Reduced padding for header */
   }
 
+
+
+  header-container {
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  
+  
   .ford-icon {
     height: 40px; /* Adjusted logo height for mobile */
   }
