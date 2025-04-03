@@ -15,6 +15,7 @@ header {
   gap: 100px;
   position: relative;
   z-index: 10; /* Ensures header stays above other content */
+
 }
 
 /* Container for header content */
@@ -459,7 +460,7 @@ header {
 
   .welcome-content {
     padding: 2rem;
-    margin-bottom: 150px;
+    margin-bottom: 10px;
   }
 
   .welcome-content h1 {
