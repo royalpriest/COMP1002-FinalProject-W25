@@ -289,7 +289,7 @@ h2 {
 
 .scroll {
   opacity: 0;
-  transform: translateY(20px); /* Чуть ниже */
+  transform: translateY(20px); 
   transition: all 0.5s ease-in-out;
 }
 
@@ -302,7 +302,7 @@ h2 {
 .media:hover {
   transform: scale(1.02);
   box-shadow: 0px 0px 20px rgba(0, 0, 139, 0.8);
-  filter: brightness(0.9); /* Немного затемняет картинку */
+  filter: brightness(0.9); 
 }
 
 
