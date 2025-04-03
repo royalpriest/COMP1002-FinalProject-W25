@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Ford Motor Company is a leading American automaker known for innovation and iconic vehicles.">
+    <meta name="keywords" content="Ford, automobile, car manufacturer, automotive industry, innovation, assembly line">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Ford</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+     <!-- Header Section -->
+    
+     <header>
+      <div class="header-container">
+        <div class="ford-logo">
+          <img src="images/ford icon.png" alt="ford-logo" class="ford-icon">
+        </div>
+        
+        <nav>
+          <ul class="nav-items">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="productpage.html">Product</a></li> 
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+          
+          <div class="language-switcher">
+            <button onclick="changeLanguage('en')"><span data-lang-key="english">En</span></button>
+            <button onclick="changeLanguage('es')"><span data-lang-key="spanish">Es</span></button>
+            <button onclick="changeLanguage('fr')"><span data-lang-key="french">Fr</span></button>
+          </div>
+        </nav>
+      </div>
+    </header>
+  
+
+
+    <!-- Main Content -->
+    <main class="container">
+        <section id="introduction">
+            <h2 data-lang-key="intro-title">Introduction</h2>
+            <p data-lang-key="intro-text">Ford Motor Company is an American multinational automaker operating since 1903. It was founded by Henry Ford and is headquartered in Dearborn, Michigan.</p>
+            <div class="media">
+                <img src="images/FordGlassHouse.jpg" alt="Ford Headquarters">
+            </div>
+        </section>
+        <section id="history">
+            <h2 data-lang-key="history-title">History</h2>
+            <p data-lang-key="history-text">Ford revolutionized the automotive industry with the Model T in 1908, the first affordable car for the average American. The company also introduced the assembly line method, greatly enhancing production efficiency.
+              Throughout its history, Ford has remained a global powerhouse, with a significant presence in international markets and a commitment to technological advancements, including the development of electric vehicles and autonomous driving technologies. The company's legacy extends beyond mass production, encompassing contributions to both world wars, pioneering safety features, and a rich history in motorsports. 
+              In 1914 Henry Ford shocked the industrial world by doubling his workers wages to 5 dollars a day. This action not only increased the moral of his workers, but also allowed them to afford the very cars they produced, boosting sales.
+            </p>
+            <div class="media">
+                <img src="images/Feature._Model_T_Ford_BAnQ_P48S1P16620.jpg" alt="Ford Model T">
+            </div>
+            <button onclick="toggleHistory()" data-lang-key="history-button">Read More</button>
+            <div id="more-history" style="display: none;">
+                <p data-lang-key="history-more">Over the decades, Ford continued to innovate, introducing new models and technologies. During World War II, Ford contributed to the war effort by producing military equipment. In the postwar era, Ford expanded globally and became one of the world's largest automakers.</p>
+            </div>
+        </section>
+        <section id="innovations">
+            <h2 data-lang-key="innovations-title">Innovations</h2>
+            <p data-lang-key="innovations-text">Beyond the assembly line, Ford has been at the forefront of automotive technology, introducing features like safety glass, fuel injection, and more recently, hybrid and electric vehicles.
+              Ford's commitment to innovation extends to pioneering safety features, with advancements in braking systems, airbag technology, and driver-assist technologies designed to enhance road safety. Their investment in research and development has also led to breakthroughs in engine efficiency and performance, including the development of the powerful and fuel-efficient EcoBoost engine family. In the realm of connectivity, Ford's SYNC system has revolutionized in-car infotainment and communication, integrating smartphones and providing seamless access to navigation, entertainment, and vehicle diagnostics. Furthermore, Ford's push into electric vehicles, with models like the Mustang Mach-E and F-150 Lightning, showcases their dedication to sustainable mobility and the future of transportation.
+
+            </p>
+            <div class="media">
+                <video controls>
+                    <source src="videos/How They Build US New Best Seller PickUp Truck - Ford Ranger Production Line.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+        <section id="mission">
+            <h2 data-lang-key="mission-title">Mission & Values</h2>
+            <p data-lang-key="mission-text">Ford’s mission is to help build a better world where every person is free to move and pursue their dreams. The company values innovation, sustainability, and community engagement.
+              This mission is driven by a deep-seated belief in the power of mobility to connect people and create opportunities. Ford strives to democratize access to transportation through continuous innovation, developing vehicles and mobility solutions that are not only technologically advanced but also accessible and affordable. Their commitment to sustainability is reflected in their ambitious goals to reduce their environmental footprint, investing heavily in electric vehicle technology and sustainable manufacturing practices. Ford recognizes their responsibility to the communities they serve, actively engaging in philanthropic initiatives and partnerships that address social and economic challenges. Integrity, quality, and customer satisfaction are also core values that guide Ford's operations, ensuring that they deliver products and services that exceed expectations. Furthermore, Ford fosters a culture of inclusivity and respect, valuing diversity and creating a workplace where every individual feels empowered to contribute their best. They believe that by embracing innovation, sustainability, and community engagement, they can create a more equitable and prosperous future for all.
+            </p>
+            <div class="media">
+                <img src="images/71w6EbffnnL._AC_UF894,1000_QL80_.jpg" alt="Ford Community Engagement" class="scroll">
+            </div>
+        </section>
+        <section id="products">
+            <h2 data-lang-key="products-title">Famous Products</h2>
+            <p data-lang-key="products-text" class="scroll-text">Some of Ford’s most iconic vehicles include the Model T, Mustang, F-150 truck, and Explorer SUV. Ford also produces luxury vehicles under the Lincoln brand.</p>
+            <div class="gallery">
+                <button class="gallery-arrow left" onclick="changeImage(-1)">&#10094;</button>
+                <div class="gallery-images">
+                    <img src="images/1925_Ford_Model_T_touring.jpg" alt="Ford Model T" class="gallery-img active">
+                    <img src="images/1969_Ford_Mustang_Mach_1_SportsRoof_428_Cobra_Je_t_w_P_51_Mustang_Fighter_Red_Frt_Qtr.jpg" alt="Ford Mustang" class="gallery-img">
+                    <img src="images/2018_Ford_F-150_XLT_Crew_Cab,_front_11.10.19.jpg" alt="Ford F-150" class="gallery-img">
+                    <img src="images/1991-1994_Ford_Explorer,_Front_right.png" alt="Ford Explorer" class="gallery-img">
+                </div>
+                <button class="gallery-arrow right" onclick="changeImage(1)">&#10095;</button>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <!--<footer>
+        <p>© 2025 Ford Motor Company</p>
+    </footer>*/-->
+
+
+    <footer class="ford-footer">
+        <div class="footer-container">
+          <div class="footer-main-row">
+            <!-- Explore Ford -->
+            <div class="footer-section">
+              <h3 class="footer-heading">Explore Ford</h3>
+              <ul class="footer-links">
+                <li><a href="#">About Ford</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Heritage</a></li>
+                <li><a href="#" target="_blank">Racing </a></li>
+                <li><a href="#" target="_blank">Global Corporate </a></li>
+                <li><a href="#" target="_blank">Modern Slavery Statement </a></li>
+                <li><a href="#">SYNC & Technology</a></li>
+                <li><a href="#">BlueCruise</a></li>
+                <li><a href="#">BlueOval Charge Network</a></li>
+                <li><a href="#">Owner Benefits</a></li>
+                <li><a href="#">FordPass</a></li>
+                <li><a href="#">FordPass Rewards</a></li>
+              </ul>
+            </div>
+      
+            
+      
+            <!-- Vehicles -->
+            <div class="footer-section">
+              <h3 class="footer-heading">Vehicles</h3>
+              <ul class="footer-links">
+                <li><a href="#">All Vehicles</a></li>
+                <li><a href="#">SUVs</a></li>
+                <li><a href="#">Trucks</a></li>
+                <li><a href="#">Electrified</a></li>
+                <li><a href="#">Commercial</a></li>
+                <li><a href="#">Future Vehicles</a></li>
+                <li><a href="#">Powertrains</a></li>
+                <li><a href="#" target="_blank">Ford Pro™ </a></li>
+              </ul>
+            </div>
+      
+           
+      
+            <!-- Shop -->
+            <div class="footer-section">
+              <h3 class="footer-heading">Shop</h3>
+              <ul class="footer-links">
+                <li><a href="#">Build & Price</a></li>
+              <li><a href="#">Current Offers</a></li>
+              <li><a href="#">Vehicle Order Tracking</a></li>
+              <li><a href="#">Compare Vehicles</a></li>
+              <li><a href="#">Find a Dealer</a></li>
+              <li><a href="#">Search Dealer Inventory</a></li>
+              <li><a href="#">Shop Online</a></li>
+              <li><a href="#">Connected Services</a></li>
+              <li><a href="#">Smart Technology</a></li>
+              <li><a href="#">Schedule a Test Drive</a></li>
+              <li><a href="#">Tire Finder</a></li>
+              </ul>
+            </div>
+      
+          
+            <!-- Support -->
+            <div class="footer-section">
+              <h3 class="footer-heading">Support</h3>
+              <ul class="footer-links">
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Roadside Assistance</a></li>
+                <li><a href="#">Safety Recalls</a></li>
+                <li><a href="#">Vehicle Ownership</a></li>
+                <li><a href="#">Recycle</a></li>
+                <li><a href="#">Owner Support</a></li>
+                <li><a href="#">Manuals & Warranties</a></li>
+                <li><a href="#">SYNC & Map Updates</a></li>
+                <li><a href="#">Towing Guides</a></li>
+              </ul>
+            </div>
+      
+            <!-- Service & Maintenance -->
+            <div class="footer-section">
+              <h3 class="footer-heading">Service & Maintenance</h3>
+              <ul class="footer-links">
+                <li><a href="#" target="_blank">Quick Lane </a></li>
+                <li><a href="#">Tires</a></li>
+                <li><a href="#">Parts</a></li>
+                <li><a href="#">Accessories</a></li>
+                <li><a href="#">Ford Protection Plans</a></li>
+                <li><a href="#">EV Charging</a></li>
+              </ul>
+            </div>
+      
+      
+            <!-- Financial Lease -->
+            <div class="footer-section">
+              <h3 class="footer-heading">Financial Lease</h3>
+              <ul class="footer-links">
+                <li><a href="#" target="_blank">Ford Credit </a></li>
+                <li><a href="#">Payment Estimator</a></li>
+                <li><a href="#">Ford Credit Canada</a></li>
+                <li><a href="#">Ford Credit Account</a></li>
+                <li><a href="#">Get Prequalified</a></li>
+                <li><a href="#">Ford Credit FAQs</a></li>
+                <li><a href="#">Ford Insure</a></li>
+                <li><a href="#" target="_blank">Payment Estimator </a></li>
+              </ul>
+            </div>
+          </div>
+      
+          <!-- Bottom Section -->
+          <div class="footer-bottom">
+            <div class="social-links">
+              <a href="#" label="Facebook">
+                <img src="images/facebook.svg" alt="Facebook" width="24" height="24">
+                Facebook
+              </a>
+              <a href="#" label="Twitter">
+                <img src="images/twitter-alt.svg" alt="Twitter" width="24" height="24">
+                Twitter
+              </a>
+              <a href="#" label="Instagram">
+                <img src="images/instagram.svg" alt="Instagram" width="24" height="24">
+                Instagram
+              </a>
+              <a href="#" label="YouTube">
+                <img src="images/youtube.svg" alt="YouTube" width="24" height="24">
+                YouTube
+              </a>
+            </div>
+          </div>
+            <div class="legal-links">
+              <a href="#">Privacy Policy</a>
+              <a href="#">Terms & Conditions</a>
+              <a href="#">Glossary</a>
+              <a href="#">Accessibility</a>
+              <a href="#">Ad Choices</a>
+              <a href="#">FordPass Terms</a>
+              <a href="#">View Use of Cookies</a>
+              <a href="#">Site Feedback</a>
+              <a href="#">Contact Us</a>
+              <a href="#">Site Map</a>
+              <a href="#">Ford Credit Terms</a>
+              <a href="#">Ford Credit Accessibility</a>
+              <div class="copyright"> <p>&copy; 2025 Ford Motor Company. All rights reserved.</p></div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    <script src="javascript/script.js"></script>
+</body>
+</html>
