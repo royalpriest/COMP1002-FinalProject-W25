@@ -1,9 +1,9 @@
 # Final-Project
-Roylpriest
+//Roylpriest
 i worked on the homepage and products page
 
-vadim
+//vadim
 i worked on the about us page
 
-Timi
+//Timi
 i worked on the contact us page
