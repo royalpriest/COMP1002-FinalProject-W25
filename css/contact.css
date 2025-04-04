@@ -84,7 +84,7 @@ header {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)), url(/images/2019_ford_ecosport_titanium_15.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7)), url(../images/2019_ford_ecosport_titanium_15.jpg);
     background-size: cover;
     background-position: center;
     height: 60vh;
